@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        To create a class inheritance, use the extends keyword.
+
+        A class created with a class inheritance inherits all the methods from another class:
+
+        It maintains an IS-A relationship.
+        The extends keyword is used in class expressions or class declarations.
+        Using extends keyword, we can acquire all the properties and behavior of the inbuilt object as well as custom classes.
+        We can also use a prototype-based approach to achieve inheritance.
+
+
+        Syntax
+
+                //Super Class   
+                class One    
+                {    
+                public void addOne()    
+                {    
+                //CODE TO DO:    
+                }   
+                }    
+                //Child Class   
+                class Two : One   
+                {    
+                public void addTwo()    
+                {    
+                //CODE TO DO:    
+                }   
+                }  
+
+
+    
+    Example
+    Create a class named "Model" which will inherit the methods from the "Car" class:
+    <script>
+    class Car {
+      constructor(brand) {
+        this.carname = brand;
+      }
+      present() {
+        return 'I have a ' + this.carname;
+      }
+    }
+    
+    class Model extends Car {
+      constructor(brand, mod) {
+        super(brand);
+        this.model = mod;
+      }
+      show() {
+        return this.present() + ', it is a ' + this.model;
+      }
+    }
+    
+    let myCar = new Model("Ford", "Mustang");
+    document.getElementById("demo").innerHTML = myCar.show();
+</script>
+
+            The super() method refers to the parent class.
+
+            By calling the super() method in the constructor method,
+             we call the parent's constructor method and gets access to the parent's properties and methods.
+
+             Inheritance is useful for code reusability: reuse properties and methods of an existing class
+              when you create a new class.
+
+
+
+
+</body>
+</html>
